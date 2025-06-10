@@ -14,7 +14,7 @@ body {
 
 body::before {
   content: "";
-  background-image: url('images_Pages/background.jpg');
+  background-image: url('../assets/images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
