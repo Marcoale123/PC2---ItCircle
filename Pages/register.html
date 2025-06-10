@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Registro – ItCircle</title>
+  <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/images/logo1.png" alt="Logo círculo">
+        <img src="../assets/images/logo2.png" alt="Logo texto">
+      </div>
+
+      <div class="nav-links">
+        <a href="../index.html">Inicio</a>
+        <a href="#">Características</a>
+        <a href="#">Contáctanos</a>
+      </div>
+
+      <div class="nav-buttons">
+        <a href="login.html" class="btn-outline">Ingresar</a>
+        <a href="register.html" class="btn-filled">Crear Cuenta</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- FORMULARIO REGISTRO -->
+  <main class="main-form">
+    <div class="form-box">
+      <h2>Crear Cuenta</h2>
+
+      <form action="#" method="post">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" type="text" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" type="email" required>
+
+        <label for="pass1">Contraseña</label>
+        <input id="pass1" type="password" required>
+
+        <label for="pass2">Confirmar contraseña</label>
+        <input id="pass2" type="password" required>
+
+        <button type="submit" class="btn-submit">Registrarse</button>
+      </form>
+
+      <p class="helper-link">¿Ya tienes cuenta?
+        <a href="login.html">Inicia sesión</a></p>
+    </div>
+  </main>
+
+</body>
+</html>
