@@ -28,7 +28,7 @@
             <h1 class="subtitle">Crear Sesión Colaborativa</h1>
         </div>
         
-        <form class="session-form">
+        <form class="session-form" id="retoForm">
             <div class="form-group">
                 <label for="session-name">Nombre del Reto</label>
                 <input type="text" id="session-name" placeholder="Ej: Carrera 5K en el parque">
@@ -75,12 +75,40 @@
             </div>
             
             <div class="form-actions">
-                <button type="button" class="invite-button">
+                <button type="button" class="invite-button" id="inviteBtn">
                     <i class="icon">👥</i> Invitar Amigos
                 </button>
                 <button type="submit" class="create-button">Crear Reto</button>
             </div>
         </form>
     </main>
+
+    <script>
+        // Event handler para el formulario
+        document.getElementById('retoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('session-name').value;
+            const categoria = document.getElementById('activity-category').value;
+            const participantes = document.getElementById('max-participants').value;
+            
+            if (nombre.trim() === '') {
+                alert('Por favor ingresa un nombre para el reto');
+                return;
+            }
+            
+            alert(`¡Reto creado!\nNombre: ${nombre}\nCategoría: ${categoria}\nParticipantes: ${participantes}`);
+        });
+
+        // Event handler para el botón de invitar
+        document.getElementById('inviteBtn').addEventListener('click', function() {
+            alert('Función de invitar amigos - Próximamente disponible');
+        });
+
+        // Event handler para cambios en la categoría
+        document.getElementById('activity-category').addEventListener('change', function() {
+            console.log('Categoría seleccionada:', this.value);
+        });
+    </script>
 </body>
 </html>
