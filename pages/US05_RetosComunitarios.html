@@ -6,6 +6,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ItCircle</title>
         <link rel="stylesheet" href="../css/US05_RetosComunitarios.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <style>
+            .nav-links a {
+                display: inline-block;
+                margin: 0 15px;
+                text-decoration: none;
+                color: inherit;
+                font-size: 0;
+            }
+            
+            .nav-links a i {
+                font-size: 24px;
+                color: #b4b4b4;
+                transition: color 0.3s;
+            }
+            
+            .nav-links a:hover i {
+                color: #1e7bbf;
+            }
+        </style>
     </head>
     <body>
         <div class="background-overlay"></div>
@@ -16,9 +36,9 @@
                     <img src="../assets/images/logo2.png" alt="Logo texto" class="logo-letra" />
                 </div>
                 <div class="nav-links">
-                    <a href="#">Home</a>
-                    <a href="../pages/comunidades.html">Comunidades</a>
-                    <a href="../pages/cuenta.html">Cuenta</a>
+                    <a href="#" title="Home"><i class="fas fa-home"></i></a>
+                    <a href="../pages/comunidades.html" title="Comunidades"><i class="fas fa-users"></i></a>
+                    <a href="../pages/cuenta.html" title="Cuenta"><i class="fas fa-user-circle"></i></a>
                 </div>
             </nav>
         </header>
@@ -29,21 +49,20 @@
             </div>
             
             <div class="action-pair">
-    <a href="CrearRetosColab.html" class="custom-button">Crear Sesión Colaborativa</a>
-    <div class="action-image">
-        <img src="../assets/images/crearRetoColab.jpg" alt="Crear sesión">
-        <p>Crea nuevos retos para tu grupo</p>
-    </div>
-</div>
+                <a href="CrearRetosColab.html" class="custom-button">Crear Sesión Colaborativa</a>
+                <div class="action-image">
+                    <img src="../assets/images/crearRetoColab.jpg" alt="Crear sesión">
+                    <p>Crea nuevos retos para tu grupo</p>
+                </div>
+            </div>
 
-<div class="action-pair">
-    <a href="UnirSesionColab.html" class="custom-button">Unirme a sesión colaborativa</a>
-    <div class="action-image">
-        <img src="../assets/images/unirmeRetoColab.jpg" alt="Unirse a sesión">
-        <p>Únete a retos existentes con tu grupo</p>
-    </div>
-</div>
-
+            <div class="action-pair">
+                <a href="UnirSesionColab.html" class="custom-button">Unirme a sesión colaborativa</a>
+                <div class="action-image">
+                    <img src="../assets/images/unirmeRetoColab.jpg" alt="Unirse a sesión">
+                    <p>Únete a retos existentes con tu grupo</p>
+                </div>
+            </div>
         </main>
     </body>
 </html>

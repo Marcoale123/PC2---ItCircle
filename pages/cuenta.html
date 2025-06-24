@@ -6,6 +6,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ItCircle</title>
         <link rel="stylesheet" href="../css/cuenta.css" />
+        <!-- Agrega Font Awesome para los iconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <style>
+            /* Estilos adicionales para los iconos de navegación */
+            .nav-links a {
+                display: inline-block;
+                margin: 0 15px;
+                text-decoration: none;
+                color: inherit;
+                font-size: 0; /* Oculta el texto */
+            }
+            
+            .nav-links a i {
+                font-size: 24px; /* Tamaño de los iconos */
+                color: #b4b4b4; /* Color de los iconos */
+                transition: color 0.3s;
+            }
+            
+            .nav-links a:hover i {
+                color: #1e7bbf; /* Color al pasar el mouse */
+            }
+            
+            /* Si prefieres usar imágenes en lugar de Font Awesome */
+            /*
+            .nav-links a img.icon {
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+            }
+            */
+        </style>
     </head>
     <body>
         <div class="background-overlay"></div>
@@ -16,9 +47,17 @@
                     <img src="../assets/images/logo2.png" alt="Logo texto" class="logo-letra" />
                 </div>
                 <div class="nav-links">
-                    <a href="#">Home</a>
-                    <a href="comunidades.html">Comunidades</a>
-                    <a href="#">Cuenta</a>
+                    <!-- Versión con Font Awesome -->
+                    <a href="#" title="Home"><i class="fas fa-home"></i></a>
+                    <a href="comunidades.html" title="Comunidades"><i class="fas fa-users"></i></a>
+                    <a href="#" title="Cuenta"><i class="fas fa-user-circle"></i></a>
+                    
+                    <!-- Versión alternativa con imágenes propias -->
+                    <!--
+                    <a href="#" title="Home"><img src="../assets/images/home-icon.png" alt="Home" class="icon"></a>
+                    <a href="comunidades.html" title="Comunidades"><img src="../assets/images/group-icon.png" alt="Comunidades" class="icon"></a>
+                    <a href="#" title="Cuenta"><img src="../assets/images/account-icon.png" alt="Cuenta" class="icon"></a>
+                    -->
                 </div>
             </nav>
         </header>
