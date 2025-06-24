@@ -5,7 +5,7 @@
 
 // Redirige cuando se hace clic en el botón principal
 document.getElementById('btnIngresar').addEventListener('click', function () {
-    window.location.href = 'pages/login.html';
+    window.location.href = 'Pages/login.html';
 });
 
 document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
