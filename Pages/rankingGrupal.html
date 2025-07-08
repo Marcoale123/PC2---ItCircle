@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItCircle - Ranking Grupal</title>
+    <link rel="stylesheet" href="../css/rankingGrupal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header consistente con otras páginas -->
+    <header class="ranking-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/images/logo1.png" alt="Logo círculo" class="logo-circulo">
+                <img src="../assets/images/logo2.png" alt="Logo texto" class="logo-letra">
+            </div>
+            <div class="nav-links">
+                <a href="../pages/home.html" title="Home"><i class="fas fa-home"></i></a>
+                <a href="../pages/comunidades.html" title="Comunidades"><i class="fas fa-users"></i></a>
+                <a href="../pages/cuenta.html" title="Cuenta"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+        <div class="banner">
+            <h1>Ranking Grupal</h1>
+            <p>Los grupos más destacados este mes</p>
+        </div>
+    </header>
+
+    <main class="ranking-container">
+        <!-- Filtros y búsqueda -->
+        <div class="filters-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar grupo..." id="searchInput">
+            </div>
+            
+            <div class="category-filter">
+                <label for="categorySelect">Filtrar por categoría:</label>
+                <select id="categorySelect">
+                    <option value="all">Todas las categorías</option>
+                    <option value="deportes">Deportes</option>
+                    <option value="ejercicio">Ejercicio</option>
+                    <option value="bienestar">Bienestar</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Lista de ranking -->
+        <div class="ranking-list">
+            <!-- Grupo 1 - Primer lugar -->
+            <div class="ranking-item first-place" data-category="deportes">
+                <div class="rank-badge">
+                    <i class="fas fa-trophy"></i>
+                    <span>1°</span>
+                </div>
+                <div class="group-img">
+                    <img src="../assets/images/grupo-ciclismo.jpg" alt="Pedaleros Extremos">
+                </div>
+                <div class="group-info">
+                    <h3>Pedaleros Extremos</h3>
+                    <div class="group-stats">
+                        <span class="members"><i class="fas fa-users"></i> 1,850 miembros</span>
+                        <span class="points"><i class="fas fa-star"></i> 9,850 pts</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 98%"></div>
+                    </div>
+                </div>
+                <div class="group-category">
+                    <span class="category-tag">Deportes</span>
+                </div>
+            </div>
+
+            <!-- Grupo 2 - Segundo lugar -->
+            <div class="ranking-item second-place" data-category="deportes">
+                <div class="rank-badge">
+                    <i class="fas fa-medal"></i>
+                    <span>2°</span>
+                </div>
+                <div class="group-img">
+                    <img src="../assets/images/grupo-calistenia.jpg" alt="Calistenia Masters">
+                </div>
+                <div class="group-info">
+                    <h3>Calistenia Masters</h3>
+                    <div class="group-stats">
+                        <span class="members"><i class="fas fa-users"></i> 3,200 miembros</span>
+                        <span class="points"><i class="fas fa-star"></i> 9,200 pts</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="group-category">
+                    <span class="category-tag">Deportes</span>
+                </div>
+            </div>
+
+            <!-- Grupo 3 - Tercer lugar -->
+            <div class="ranking-item third-place" data-category="bienestar">
+                <div class="rank-badge">
+                    <i class="fas fa-medal"></i>
+                    <span>3°</span>
+                </div>
+                <div class="group-img">
+                    <img src="../assets/images/grupo-yoga.png" alt="Yoga Life">
+                </div>
+                <div class="group-info">
+                    <h3>Yoga Life</h3>
+                    <div class="group-stats">
+                        <span class="members"><i class="fas fa-users"></i> 1,250 miembros</span>
+                        <span class="points"><i class="fas fa-star"></i> 8,750 pts</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 87%"></div>
+                    </div>
+                </div>
+                <div class="group-category">
+                    <span class="category-tag">Bienestar</span>
+                </div>
+            </div>
+
+            <!-- Grupo 4 -->
+            <div class="ranking-item" data-category="bienestar">
+                <div class="rank-badge">
+                    <span>4°</span>
+                </div>
+                <div class="group-img">
+                    <img src="../assets/images/grupo-trekkin.jpg" alt="Trekking Perú">
+                </div>
+                <div class="group-info">
+                    <h3>Trekking Perú</h3>
+                    <div class="group-stats">
+                        <span class="members"><i class="fas fa-users"></i> 980 miembros</span>
+                        <span class="points"><i class="fas fa-star"></i> 8,100 pts</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 81%"></div>
+                    </div>
+                </div>
+                <div class="group-category">
+                    <span class="category-tag">Bienestar</span>
+                </div>
+            </div>
+
+            <!-- Grupo 5 -->
+            <div class="ranking-item" data-category="ejercicio">
+                <div class="rank-badge">
+                    <span>5°</span>
+                </div>
+                <div class="group-img">
+                    <img src="../assets/images/grupo-smartfit.jpg" alt="Smart Fit Lima">
+                </div>
+                <div class="group-info">
+                    <h3>Smart Fit Lima</h3>
+                    <div class="group-stats">
+                        <span class="members"><i class="fas fa-users"></i> 2,450 miembros</span>
+                        <span class="points"><i class="fas fa-star"></i> 7,950 pts</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 79%"></div>
+                    </div>
+                </div>
+                <div class="group-category">
+                    <span class="category-tag">Ejercicio</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botón de volver atrás -->
+    <button class="back-button" onclick="window.history.back()">
+        <i class="fas fa-arrow-left"></i> Volver
+    </button>
+
+    <footer>
+        <p><a href="#">Términos y condiciones</a> | <a href="#">Política de privacidad</a></p>
+        <p>© 2023 ItCircle. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para filtrar grupos
+        document.getElementById('categorySelect').addEventListener('change', function() {
+            const category = this.value;
+            const grupos = document.querySelectorAll('.ranking-item');
+            
+            grupos.forEach(grupo => {
+                if (category === 'all' || grupo.dataset.category === category) {
+                    grupo.style.display = 'flex';
+                } else {
+                    grupo.style.display = 'none';
+                }
+            });
+        });
+
+        // Función para buscar grupos
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const grupos = document.querySelectorAll('.ranking-item');
+            
+            grupos.forEach(grupo => {
+                const nombre = grupo.querySelector('h3').textContent.toLowerCase();
+                if (nombre.includes(searchTerm)) {
+                    grupo.style.display = 'flex';
+                } else {
+                    grupo.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
