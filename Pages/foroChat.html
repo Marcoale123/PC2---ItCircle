@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItCircle - Foro Chat</title>
+    <link rel="stylesheet" href="../css/foroChat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header consistente -->
+    <header class="foro-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/images/logo1.png" alt="Logo círculo" class="logo-circulo">
+                <img src="../assets/images/logo2.png" alt="Logo texto" class="logo-letra">
+            </div>
+            <div class="nav-links">
+                <a href="../pages/home.html" title="Home"><i class="fas fa-home"></i></a>
+                <a href="../pages/comunidades.html" title="Comunidades"><i class="fas fa-users"></i></a>
+                <a href="../pages/cuenta.html" title="Cuenta"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+        <div class="banner">
+            <h1>Foro Chat Global</h1>
+            <p>Conéctate, pregunta y comparte con la comunidad</p>
+        </div>
+    </header>
+
+    <main class="foro-container">
+        <!-- Filtros y búsqueda -->
+        <div class="foro-actions">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar en el foro..." id="searchForo">
+                <button class="search-btn">Buscar</button>
+            </div>
+            
+            <div class="filter-options">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Populares</button>
+                <button class="filter-btn">Recientes</button>
+                <button class="filter-btn">Sin resolver</button>
+            </div>
+        </div>
+
+        <!-- Área de chat/foro -->
+        <div class="chat-container">
+            <!-- Mensajes del foro -->
+            <div class="messages-container" id="messagesContainer">
+                <!-- Mensaje ejemplo 1 -->
+                <div class="message">
+                    <div class="user-avatar">
+                        <img src="../assets/images/user1.png" alt="Usuario">
+                        <span class="user-name">María Gómez</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <p>¿Alguien tiene recomendaciones para rutinas de ejercicio en casa sin equipos? Quiero empezar pero no tengo acceso a gimnasio.</p>
+                        </div>
+                        <div class="message-actions">
+                            <span class="message-time">Hace 2 horas</span>
+                            <button class="reply-btn"><i class="fas fa-reply"></i> Responder</button>
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> 12</button>
+                        </div>
+                        
+                        <!-- Respuestas -->
+                        <div class="replies">
+                            <div class="reply">
+                                <div class="user-avatar small">
+                                    <img src="../assets/images/user1.png" alt="Usuario">
+                                </div>
+                                <div class="reply-content">
+                                    <span class="user-name">Carlos Ruiz</span>
+                                    <p>Te recomiendo apps como Nike Training Club o FitOn, tienen rutinas excelentes sin necesidad de equipos.</p>
+                                    <div class="reply-actions">
+                                        <span class="message-time">Hace 1 hora</span>
+                                        <button class="like-btn"><i class="far fa-thumbs-up"></i> 5</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mensaje ejemplo 2 -->
+                <div class="message">
+                    <div class="user-avatar">
+                        <img src="../assets/images/user1.png" alt="Usuario">
+                        <span class="user-name">Ana Torres</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <p>Comparto esta foto de mi progreso después de 3 meses siguiendo el reto de ciclismo 🚴‍♀️ ¡Estoy muy contenta con los resultados!</p>
+                            <div class="message-attachment">
+                                <img src="../assets/images/progreso-ciclismo.jpg" alt="Progreso ciclismo" class="attachment-image">
+                            </div>
+                        </div>
+                        <div class="message-actions">
+                            <span class="message-time">Ayer 15:30</span>
+                            <button class="reply-btn"><i class="fas fa-reply"></i> Responder</button>
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> 28</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mensaje ejemplo 3 -->
+                <div class="message">
+                    <div class="user-avatar">
+                        <img src="../assets/images/user1.png" alt="Usuario">
+                        <span class="user-name">Luis Mendoza</span>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <p>¿Alguien puede recomendarme buenos audiolibros sobre desarrollo personal? Preferiblemente en español.</p>
+                            <div class="message-attachment">
+                                <audio controls class="audio-player">
+                                    <source src="#" type="audio/mpeg">
+                                    Tu navegador no soporta audio.
+                                </audio>
+                                <span class="audio-duration">1:25</span>
+                            </div>
+                        </div>
+                        <div class="message-actions">
+                            <span class="message-time">Ayer 10:15</span>
+                            <button class="reply-btn"><i class="fas fa-reply"></i> Responder</button>
+                            <button class="like-btn"><i class="far fa-thumbs-up"></i> 7</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Área de envío de mensajes -->
+            <div class="message-input-container">
+                <div class="input-options">
+                    <button class="option-btn" title="Adjuntar imagen"><i class="fas fa-image"></i></button>
+                    <button class="option-btn" title="Adjuntar archivo"><i class="fas fa-paperclip"></i></button>
+                    <button class="option-btn" title="Grabar audio"><i class="fas fa-microphone"></i></button>
+                    <button class="option-btn emoji-btn" title="Emojis"><i class="far fa-smile"></i></button>
+                </div>
+                <div class="input-wrapper">
+                    <textarea id="messageInput" placeholder="Escribe tu mensaje o pregunta..."></textarea>
+                    <button class="send-btn" id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <div class="typing-indicator">
+                    <span id="typingText"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar con usuarios activos -->
+        <div class="active-users-sidebar">
+            <h3>Usuarios activos <span class="online-count">24</span></h3>
+            <div class="users-list">
+                <div class="active-user">
+                    <img src="../assets/images/user1.jpg" alt="Usuario" class="user-avatar">
+                    <span class="user-name">María Gómez</span>
+                    <span class="online-dot"></span>
+                </div>
+                <div class="active-user">
+                    <img src="../assets/images/user2.jpg" alt="Usuario" class="user-avatar">
+                    <span class="user-name">Carlos Ruiz</span>
+                    <span class="online-dot"></span>
+                </div>
+                <div class="active-user">
+                    <img src="../assets/images/user3.jpg" alt="Usuario" class="user-avatar">
+                    <span class="user-name">Ana Torres</span>
+                    <span class="online-dot"></span>
+                </div>
+                <div class="active-user">
+                    <img src="../assets/images/user4.jpg" alt="Usuario" class="user-avatar">
+                    <span class="user-name">Luis Mendoza</span>
+                    <span class="online-dot"></span>
+                </div>
+                <div class="active-user">
+                    <img src="../assets/images/user5.jpg" alt="Usuario" class="user-avatar">
+                    <span class="user-name">Pedro Sánchez</span>
+                    <span class="online-dot"></span>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Normas del foro</h3>
+                <ul class="rules-list">
+                    <li>Sé respetuoso con todos</li>
+                    <li>No compartas información personal</li>
+                    <li>Mantén las conversaciones relevantes</li>
+                    <li>Reporta contenido inapropiado</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botón de volver atrás -->
+    <button class="back-button" onclick="window.history.back()">
+        <i class="fas fa-arrow-left"></i> Volver
+    </button>
+
+    <footer>
+        <p><a href="#">Términos y condiciones</a> | <a href="#">Política de privacidad</a> | <a href="#">Normas de la comunidad</a></p>
+        <p>© 2023 ItCircle. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Funcionalidad básica del chat
+        document.getElementById('sendMessage').addEventListener('click', function() {
+            const messageInput = document.getElementById('messageInput');
+            const messageText = messageInput.value.trim();
+            
+            if (messageText) {
+                // Aquí iría la lógica para enviar el mensaje
+                console.log('Mensaje enviado:', messageText);
+                messageInput.value = '';
+                
+                
+                const newMessage = createMessageElement('Tú', messageText, 'justo ahora');
+                document.getElementById('messagesContainer').appendChild(newMessage);
+                
+            }
+        });
+
+        // Permitir enviar con Enter
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                document.getElementById('sendMessage').click();
+            }
+        });
+
+        // Simular indicador de "escribiendo"
+        let typingTimeout;
+        document.getElementById('messageInput').addEventListener('input', function() {
+            document.getElementById('typingText').textContent = "Escribiendo...";
+            
+            clearTimeout(typingTimeout);
+            typingTimeout = setTimeout(function() {
+                document.getElementById('typingText').textContent = "";
+            }, 2000);
+        });
+
+        // Filtrar mensajes
+        document.getElementById('searchForo').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const messages = document.querySelectorAll('.message');
+            
+            messages.forEach(message => {
+                const text = message.querySelector('.message-text p').textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    message.style.display = 'flex';
+                } else {
+                    message.style.display = 'none';
+                }
+            });
+        });
+
+        // Activar filtros
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Aquí iría la lógica para filtrar
+            });
+        });
+    </script>
+</body>
+</html>
