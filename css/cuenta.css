@@ -1,0 +1,174 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+   font-family: 'Segoe UI', sans-serif;
+  color: #000;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  background-image: url('../assets/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.15; /* Adjust transparency (0.1 to 0.3 recommended) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.main-content {
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title section with icon */
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  gap: 1rem;
+}
+
+.title-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0b0b6b;
+}
+
+.subtitle {
+  font-size: 3rem; /* Reduced from 4rem */
+  color: #07074d;
+  margin: 0;
+  position: relative ;
+}
+
+/* Button pairs layout */
+.button-pairs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.button-pair {
+  display: flex;
+  justify-content: center;
+  gap: 8.5rem;
+}
+
+/* Custom buttons */
+.custom-button {
+  padding: 1rem 1.5rem;
+  background-color: #0b0b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 200px;
+  min-height: 70px;
+  background-color: rgba(11, 11, 107, 0.9); /* Slightly transparent */
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+  background-color: #07074d;
+  transform: translateY(-3px);
+}
+
+/* Header */
+header {
+  background-color: rgba(7, 7, 77, 0.9); /* Slightly transparent dark blue */
+  padding: 1rem 2rem;
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Nav links */
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .title-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .button-pair {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .custom-button {
+    width: 100%;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #07074d;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  background-color: rgba(7, 7, 77, 0.9);
+  backdrop-filter: blur(5px);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}

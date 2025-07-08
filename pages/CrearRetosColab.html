@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#1e7bbf">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Reto Colaborativo | ItCircle</title>
+    <link rel="stylesheet" href="../css/CrearRetosColab.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .nav-links a {
+            display: inline-block;
+            margin: 0 15px;
+            text-decoration: none;
+            color: inherit;
+            font-size: 0;
+        }
+        
+        .nav-links a i {
+            font-size: 24px;
+            color: #ececec;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover i {
+            color: #1e7bbf;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/images/logo1.png" alt="Logo círculo" class="logo-circulo">
+                <img src="../assets/images/logo2.png" alt="Logo texto" class="logo-letra">
+            </div>
+            <div class="nav-links">
+                <a href="#" title="Home"><i class="fas fa-home"></i></a>
+                <a href="../pages/comunidades.html" title="Comunidades"><i class="fas fa-users"></i></a>
+                <a href="../pages/cuenta.html" title="Cuenta"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- Añade este botón en tu header, debajo del nav -->
+<button class="back-button" onclick="goBack()">
+    <i class="fas fa-arrow-left"></i> Volver
+</button>
+
+<style>
+        /* Nuevos estilos para el botón en esquina inferior izquierda */
+        .back-button {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background-color: #1e7bbf;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .back-button i {
+            font-size: 18px;
+        }
+        
+        .back-button:hover {
+            background-color: #145a8c;
+            transform: translateX(-3px);
+        }
+    </style>
+
+<script>
+    function goBack() {
+        // Retrocede a la página anterior manteniendo el historial
+        window.history.back();
+        
+        // Alternativa: Redirigir a una página específica si no hay historial
+        // window.location.href = "comunidades.html";
+    }
+</script>
+
+    <main class="main-content">
+        <div class="title-container">
+            <h1 class="subtitle">Crear Sesión Colaborativa</h1>
+        </div>
+        
+        <form class="session-form" id="retoForm">
+            <div class="form-group">
+                <label for="session-name">Nombre del Reto</label>
+                <input type="text" id="session-name" placeholder="Ej: Carrera 5K en el parque">
+            </div>
+            
+            <div class="form-group">
+                <label>Tipo de Actividad</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="activity-type" value="indoor" checked>
+                        <span>Indoor</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="activity-type" value="outdoor">
+                        <span>Outdoor</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="activity-category">Categoría</label>
+                <select id="activity-category">
+                    <option value="running">Running</option>
+                    <option value="cycling">Ciclismo</option>
+                    <option value="swimming">Natación</option>
+                    <option value="gym">Gimnasio</option>
+                    <option value="other">Otro</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="max-participants">Máximo de Participantes</label>
+                <input type="number" id="max-participants" min="2" max="50" value="10">
+            </div>
+            
+            <div class="form-group">
+                <label for="session-date">Fecha y Hora</label>
+                <input type="datetime-local" id="session-date">
+            </div>
+            
+            <div class="form-group">
+                <label for="session-desc">Descripción</label>
+                <textarea id="session-desc" rows="4" placeholder="Describe tu reto..."></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="invite-button" id="inviteBtn">
+                    <i class="icon">👥</i> Invitar Amigos
+                </button>
+                <button type="submit" class="create-button">Crear Reto</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        // Event handler para el formulario
+        document.getElementById('retoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('session-name').value;
+            const categoria = document.getElementById('activity-category').value;
+            const participantes = document.getElementById('max-participants').value;
+            
+            if (nombre.trim() === '') {
+                alert('Por favor ingresa un nombre para el reto');
+                return;
+            }
+            
+            alert(`¡Reto creado!\nNombre: ${nombre}\nCategoría: ${categoria}\nParticipantes: ${participantes}`);
+        });
+
+        // Event handler para el botón de invitar
+        document.getElementById('inviteBtn').addEventListener('click', function() {
+            alert('Función de invitar amigos - Próximamente disponible');
+        });
+
+        // Event handler para cambios en la categoría
+        document.getElementById('activity-category').addEventListener('change', function() {
+            console.log('Categoría seleccionada:', this.value);
+        });
+    </script>
+</body>
+</html>

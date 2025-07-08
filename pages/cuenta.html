@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="theme-color" content="#1e7bbf" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ItCircle</title>
+        <link rel="stylesheet" href="../css/cuenta.css" />
+        <!-- Agrega Font Awesome para los iconos -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <style>
+            /* Estilos adicionales para los iconos de navegación */
+            .nav-links a {
+                display: inline-block;
+                margin: 0 15px;
+                text-decoration: none;
+                color: inherit;
+                font-size: 0; /* Oculta el texto */
+            }
+            
+            .nav-links a i {
+                font-size: 24px; /* Tamaño de los iconos */
+                color: #ececec; /* Color de los iconos */
+                transition: color 0.3s;
+            }
+            
+            .nav-links a:hover i {
+                color: #1e7bbf; /* Color al pasar el mouse */
+            }
+            
+            /* Si prefieres usar imágenes en lugar de Font Awesome */
+            /*
+            .nav-links a img.icon {
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+            }
+            */
+        </style>
+    </head>
+    <body>
+        <div class="background-overlay"></div>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../assets/images/logo1.png" alt="Logo círculo" class="logo-circulo" />
+                    <img src="../assets/images/logo2.png" alt="Logo texto" class="logo-letra" />
+                </div>
+                <div class="nav-links">
+                    <!-- Versión con Font Awesome -->
+                    <a href="home.html" title="Home"><i class="fas fa-home"></i></a>
+                    <a href="comunidades.html" title="Comunidades"><i class="fas fa-users"></i></a>
+                    <a href="#" title="Cuenta"><i class="fas fa-user-circle"></i></a>
+                    
+                    <!-- Versión alternativa con imágenes propias -->
+                    <!--
+                    <a href="#" title="Home"><img src="../assets/images/home-icon.png" alt="Home" class="icon"></a>
+                    <a href="comunidades.html" title="Comunidades"><img src="../assets/images/group-icon.png" alt="Comunidades" class="icon"></a>
+                    <a href="#" title="Cuenta"><img src="../assets/images/account-icon.png" alt="Cuenta" class="icon"></a>
+                    -->
+                </div>
+            </nav>
+        </header>
+        <!-- Añade este botón en tu header, debajo del nav -->
+<button class="back-button" onclick="goBack()">
+    <i class="fas fa-arrow-left"></i> Volver
+</button>
+
+<style>
+        /* Nuevos estilos para el botón en esquina inferior izquierda */
+        .back-button {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            background-color: #1e7bbf;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+        
+        .back-button i {
+            font-size: 18px;
+        }
+        
+        .back-button:hover {
+            background-color: #145a8c;
+            transform: translateX(-3px);
+        }
+    </style>
+
+<script>
+    function goBack() {
+        // Retrocede a la página anterior manteniendo el historial
+        window.history.back();
+        
+        // Alternativa: Redirigir a una página específica si no hay historial
+        // window.location.href = "comunidades.html";
+    }
+</script>
+
+        <main class="main-content">
+            <div class="title-container">
+                <img src="../assets/images/userIcon.jpg" alt="User icon" class="title-icon">
+                <h2 class="subtitle">Nombre Usuario</h2>
+            </div>
+            
+            <div class="button-pairs-container">
+                <div class="button-pair">
+                    <button class="custom-button">Mi Perfil</button>
+                    <button class="custom-button">Preferencias</button>
+                </div>
+                <div class="button-pair">
+                    <button class="custom-button">Historial Retos</button>
+                    <button class="custom-button">Cerrar Sesion</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
