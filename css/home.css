@@ -1,194 +1,225 @@
-/* Reset básico */
+/* home.css - Estilos mejorados */
+/* Reset y estilos base */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
-  color: #000;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-
-
-/* Header */
+/* Header y navegación */
 header {
-  background-color: #07074d;
-  padding: 1rem 2rem;
+    background-color: #07074d;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo img {
-  height: 50px;
-  width: auto;
+    height: 50px;
+    width: auto;
 }
 
-/* Nav links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
 .nav-links a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
+    color: #ececec;
+    font-size: 0;
+    transition: color 0.3s;
+}
+
+.nav-links a i {
+    font-size: 24px;
+}
+
+.nav-links a:hover i {
+    color: #1e7bbf;
 }
 
 /* Contenido principal */
-.main-content {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
 }
 
-/* Mensaje de bienvenida */
-.welcome-message {
-  font-size: 4rem;
-  color: #07074d;
-  margin-bottom: 2rem;
-  text-align: center;
-  position: relative;
-  padding-bottom: 2rem;
+.main-title {
+    text-align: center;
+    color: #07074d;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 15px;
 }
 
-.welcome-message::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background-color: #1e7bbf;
-  border-radius: 2px;
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #1e7bbf;
+    border-radius: 2px;
 }
 
-/* Contenedor de botones */
-.home-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin: 3rem 0;
+/* Grid de botones */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Botones principales */
-.home-button {
-  padding: 1.5rem 1rem;
-  background-color: #0b0b6b;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.grid-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.home-button:hover {
-  background-color: #1e7bbf;
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-image-container {
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    color: #07074d;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.card-description {
+    color: #666;
+    font-size: 0.95rem;
 }
 
 /* Botón de volver */
 .back-button {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  background-color: #1e7bbf;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 12px 24px;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: all 0.3s ease;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: #1e7bbf;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s;
 }
 
 .back-button:hover {
-  background-color: #0b0b6b;
-  transform: translateX(-5px);
-}
-
-.back-button i {
-  font-size: 1.2rem;
+    background-color: #145a8c;
+    transform: translateX(-3px);
 }
 
 /* Footer */
 footer {
-  background-color: #07074d;
-  color: white;
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.9rem;
-  margin-top: 3rem;
+    background-color: #07074d;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
 }
 
 footer a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #4dabf7;
+    text-decoration: underline;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .welcome-message {
-    font-size: 2.5rem;
-    padding-bottom: 1.5rem;
-  }
-  
-  .home-buttons {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .home-button {
-    min-height: 80px;
-    font-size: 1.1rem;
-  }
-  
-  .back-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
+    .grid-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 @media (max-width: 480px) {
-  .welcome-message {
-    font-size: 2rem;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .nav-links {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    .back-button {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
 }
