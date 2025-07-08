@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItCircle - Grupos Activos</title>
+    <link rel="stylesheet" href="../css/gruposActivos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header igual al de comunidades -->
+    <header class="grupos-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/images/logo1.png" alt="Logo círculo" class="logo-circulo">
+                <img src="../assets/images/logo2.png" alt="Logo texto" class="logo-letra">
+            </div>
+            <div class="nav-links">
+                <a href="../pages/home.html" title="Home"><i class="fas fa-home"></i></a>
+                <a href="../pages/comunidades.html" title="Comunidades"><i class="fas fa-users"></i></a>
+                <a href="../pages/cuenta.html" title="Cuenta"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+        <div class="banner">
+            <h1>Grupos Activos</h1>
+            <p>Conéctate con personas que comparten tus intereses</p>
+        </div>
+    </header>
+
+    <main class="grupos-container">
+        <!-- Barra de búsqueda -->
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar grupo..." id="searchInput">
+                <button class="search-button">Buscar</button>
+            </div>
+            <button class="create-group-btn">
+                <i class="fas fa-plus"></i> Crear Grupo Nuevo
+            </button>
+        </div>
+
+        <!-- Lista de grupos -->
+        <div class="grupos-list">
+            <!-- Grupo 1 -->
+            <div class="grupo-card">
+                <div class="grupo-img">
+                    <img src="../assets/images/grupo-ciclismo.jpg" alt="Grupo Ciclismo Lima">
+                </div>
+                <div class="grupo-info">
+                    <h3>Grupo Ciclismo Lima</h3>
+                    <p>1,245 miembros · Activo ahora</p>
+                    <div class="grupo-tags">
+                        <span class="tag">Ciclismo</span>
+                        <span class="tag">Deporte</span>
+                        <span class="tag">Lima</span>
+                    </div>
+                </div>
+                <button class="unirse-btn">Unirse</button>
+            </div>
+
+            <!-- Grupo 2 -->
+            <div class="grupo-card">
+                <div class="grupo-img">
+                    <img src="../assets/images/grupo-yoga.png" alt="Yoga Matutino">
+                </div>
+                <div class="grupo-info">
+                    <h3>Yoga Matutino</h3>
+                    <p>856 miembros · 15 activos</p>
+                    <div class="grupo-tags">
+                        <span class="tag">Yoga</span>
+                        <span class="tag">Bienestar</span>
+                        <span class="tag">Online</span>
+                    </div>
+                </div>
+                <button class="unirse-btn">Unirse</button>
+            </div>
+
+            <!-- Grupo 3 -->
+            <div class="grupo-card">
+                <div class="grupo-img">
+                    <img src="../assets/images/grupo-calistenia.jpg" alt="Calistenia Miraflores">
+                </div>
+                <div class="grupo-info">
+                    <h3>Calistenia Miraflores</h3>
+                    <p>2,103 miembros · 32 activos</p>
+                    <div class="grupo-tags">
+                        <span class="tag">Calistenia</span>
+                        <span class="tag">Ejercicio</span>
+                        <span class="tag">Miraflores</span>
+                    </div>
+                </div>
+                <button class="unirse-btn">Unirse</button>
+            </div>
+
+            <!-- Grupo 4 -->
+            <div class="grupo-card">
+                <div class="grupo-img">
+                    <img src="../assets/images/grupo-trekkin.jpg" alt="Trekking Lima">
+                </div>
+                <div class="grupo-info">
+                    <h3>Trekking Lima</h3>
+                    <p>5,678 miembros · 120 activos</p>
+                    <div class="grupo-tags">
+                        <span class="tag">Naturaleza</span>
+                        <span class="tag">Aventura</span>
+                        <span class="tag">Lima</span>
+                    </div>
+                </div>
+                <button class="unirse-btn">Unirse</button>
+            </div>
+
+            <!-- Grupo 5 -->
+            <div class="grupo-card">
+                <div class="grupo-img">
+                    <img src="../assets/images/grupo-smartfit.jpg" alt="Smart Fit Lima">
+                </div>
+                <div class="grupo-smartfit">
+                    <h3>Smart Fit Lima</h3>
+                    <p>3,421 miembros · 45 activos</p>
+                    <div class="grupo-tags">
+                        <span class="tag">Gym</span>
+                        <span class="tag">Salud</span>
+                        <span class="tag">Rutinas</span>
+                    </div>
+                </div>
+                <button class="unirse-btn">Unirse</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botón de volver atrás -->
+    <button class="back-button" onclick="window.history.back()">
+        <i class="fas fa-arrow-left"></i> Volver
+    </button>
+
+    <footer>
+        <p><a href="#">Términos y condiciones</a> | <a href="#">Política de privacidad</a></p>
+        <p>© 2023 ItCircle. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para buscar grupos
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const grupos = document.querySelectorAll('.grupo-card');
+            
+            grupos.forEach(grupo => {
+                const nombre = grupo.querySelector('h3').textContent.toLowerCase();
+                if (nombre.includes(searchTerm)) {
+                    grupo.style.display = 'flex';
+                } else {
+                    grupo.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@import url('/css/Acerca.css');
+
+.features {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  margin-bottom: 1rem;
+  background-color: #f0f4ff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
