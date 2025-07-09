@@ -83,7 +83,11 @@ header {
 }
 
 .hero-text {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
   flex: 1 1 45%;
+  min-width: 300px;
 }
 
 .hero-text h1 {
